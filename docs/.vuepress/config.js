@@ -1,42 +1,74 @@
 const path = require('path')
+const sidebar_zh = require('./config/sidebar/zh')
 
 module.exports = {
+  locales: {
+    '/': {
+      lang: 'zh-CN',
+      title: 'CSTHINK',
+      description: '致所有热爱编程的我们'
+    },
+    '/en/': {
+      lang: 'en-US',
+      title: 'CSTHINK',
+      description: 'Write Code. Make Magic.'
+    }
+  },
   title: 'csthink Blog',
   description: 'Write Code,Make Magic',
   head: [
-    ['link', { rel: 'icon', href: '/images/favicon.ico' }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // ['link', { rel: 'manifest', href: '/manifest.json' }],
   ],
   port: 80,
   dest: path.resolve(__dirname, '../../dist'),
   serviceWorker: true,
   markdown: {
     lineNumbers: true,
+    anchor: {
+      permalink: true
+    },
+    // markdown-it-toc 的选项
+    toc: {
+      includeLevel: [1, 2, 3]
+    },
   },
   themeConfig: {
-    nav: [
-      { text: 'Home', link: '/' },
-      {
-        text: '技术',
-        items: [
-          { text: 'H5', link: '/H5/H5和app对接文档' },
-          { text: 'Standard', link: '/Standard/H5开发规范' }
-        ]
-      },
-      { text: 'GitHub', link: 'https://github.com/csthink' },
-    ],
-    sidebar: {
-      '/H5/': [
-        'H5和app对接文档',
-        '管理后台开发文档'
-      ],
-      '/Standard/': [
-        'H5开发规范',
-        'H5版本管理规范'
-      ]
-    },
+    repo: 'csthink/vuepress.csthink.com',
+    editLinks: true,
     sidebarDepth: 2,
-    lastUpdated: 'Last Updated',
     displayAllHeaders: true,
-  }
+    locales: {
+      '/': {
+        label: '简体中文',
+        selectText: '选择语言',
+        editLinkText: '帮助我们改进这个页面!',
+        lastUpdated: '上次更新',
+        nav: require('./config/nav/zh'),
+        sidebar: sidebar_zh
+      },
+      '/en/': {
+        label: 'English',
+        selectText: 'Languages',
+        editLinkText: 'Help us improve this page!',
+        lastUpdated: 'Last Updated',
+        nav: require('./config/nav/en'),
+      }
+    },
+  },
+  plugins: [
+    ['@vuepress/back-to-top', true],
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: true
+    }],
+    ['@vuepress/google-analytics',{
+        'ga': 'UA-145436373-1'
+    }],
+    ['@vuepress/medium-zoom'],
+  ],
+  extraWatchFiles: [
+    '.vuepress/nav/en.js',
+    '.vuepress/nav/zh.js',
+  ]
 }

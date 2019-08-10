@@ -15,5 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^6.1.0"
+  },
+  "dependencies": {
+    "vuepress": "^1.0.3"
   }
 }

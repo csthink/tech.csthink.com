@@ -19,6 +19,9 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     // ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['script', { src: "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" }],
+    ['script', {},
+    '(adsbygoogle = window.adsbygoogle || []).push({  google_ad_client: "ca-pub-7505588143637216",  enable_page_level_ads: true });'],
   ],
   port: 80,
   dest: path.resolve(__dirname, '../../dist'),

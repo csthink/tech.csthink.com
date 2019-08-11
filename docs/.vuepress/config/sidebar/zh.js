@@ -1,7 +1,6 @@
 const java = [
   {
     title: '基础篇',
-    // collapsable: false,
     children: [
       '/zh/Java/Java基础',
       '/zh/Java/类集框架',
@@ -12,7 +11,6 @@ const java = [
   },
   {
     title: '进阶篇',
-    // collapsable: false,
     children: [
       '/zh/Java/Spring 简介以及 Bean 管理',
       '/zh/Java/Spring AOP 入门篇',
@@ -22,7 +20,6 @@ const java = [
   },
   {
     title: '高级篇',
-    // collapsable: false,
     children: [
       '/zh/Java/软件设计原则-上',
     ]

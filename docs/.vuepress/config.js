@@ -39,6 +39,7 @@ module.exports = {
   themeConfig: {
     repo: 'csthink/vuepress.csthink.com',
     editLinks: true,
+    docsDir: 'docs',
     sidebarDepth: 2,
     displayAllHeaders: true,
     locales: {

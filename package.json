@@ -14,6 +14,7 @@
   "author": "csthink",
   "license": "ISC",
   "devDependencies": {
+    "@babel/runtime-corejs2": "^7.5.5",
     "@vuepress/plugin-back-to-top": "^1.0.3",
     "@vuepress/plugin-google-analytics": "^1.0.3",
     "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
@@ -22,6 +23,7 @@
     "eslint": "^6.1.0"
   },
   "dependencies": {
+    "vue-terminal": "^1.0.1-beta",
     "vuepress": "^1.0.3"
   }
 }

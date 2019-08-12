@@ -36,6 +36,16 @@ description: csthink terminal
       }
     ]
   },
+  document: {
+    description: 'Document of this project.',
+    messages: [
+      { message: {
+        text: 'Under Construction',
+        list: [
+        { label: 'hello', type: 'error', message: 'this is a test message' }
+        ]
+      } }]
+  }
 }
 
 function generateTime() {

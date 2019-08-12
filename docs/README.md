@@ -4,7 +4,7 @@ footer: MIT Licensed | Copyright © 2015-present CSTHINK
 ---
 
 <div id="home-button-div">
-  <a href="/terminal" class="home-guide-button">Make Magic</a>
+  <a href="/csthink-terminal/index.html" target="_blank" class="home-guide-button">Make Magic</a>
 </div>
 
 ## 💡 实验室

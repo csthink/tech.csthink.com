@@ -1,9 +1,15 @@
+---
+title: Servlet 与 JSP
+---
+
+[[toc]]
+
 # Servlet 与 JSP
 ## CGI、fast-cgi、servlet 区别
 
->Sun Microsystems 公司在1996年发布 Servlet 技术就是为了和 CGI 进行竞争，Servlet 是一个特殊的 Java 程序，一个基于 Java 的 Web 应用通常包含一个或多个Servlet 类。Servlet 不能够自行创建并执行，它是在 Servlet 容器中运行的，容器将用户的请求传递给 Servlet 程序，并将 Servlet 的响应回传给用户。通常一个Servlet 会关联一个或多个 JSP 页面。以前CGI经常因为性能开销上的问题被诟病，不过 Fast CGI经解决了 CGI 效率上的问题
-
-<!-- more -->
+::: tip
+Sun Microsystems 公司在1996年发布 Servlet 技术就是为了和 CGI 进行竞争，Servlet 是一个特殊的 Java 程序，一个基于 Java 的 Web 应用通常包含一个或多个Servlet 类。Servlet 不能够自行创建并执行，它是在 Servlet 容器中运行的，容器将用户的请求传递给 Servlet 程序，并将 Servlet 的响应回传给用户。通常一个Servlet 会关联一个或多个 JSP 页面。以前CGI经常因为性能开销上的问题被诟病，不过 Fast CGI经解决了 CGI 效率上的问题
+:::
 
 ### CGI
 - Web服务器每收到一个请求，都会去 fork 一个 cgi 进程，请求结束再 kill 掉这个进程。这样假如有10000个请求，就需要 fork、kill cgi 进程10000次，带来很大的开销
@@ -37,11 +43,11 @@
 ### Cookie 的设置以及发送过程
 
 ```shell
-Web Client				                        Web Server
-		1. ===== HTTP Request =================>
-		2. <==== HTTP Response + Set-Cookie =====
-		3. ===== HTTP Request + Cookie =========>
-		4. <==== HTTP Response ==================
+Web Client				    Web Server
+1. ===== HTTP Request =================>
+2. <==== HTTP Response + Set-Cookie =====
+3. ===== HTTP Request + Cookie =========>
+4. <==== HTTP Response ==================
 ```
 
 ### Session
@@ -53,13 +59,13 @@ Web Client				                        Web Server
 #### 方式一: 使用 Cookie 来实现
 	
 ```shell
-Web Client			                    Web Server
-        ----------- Request ---------->
-        <-------- Response ----------
-        Set-Cookie：JSESSIONID=xxx
-        --------- Request ----------->
-        Cookie:JSESSIONID=xxxx
-        <--------- Response ----------
+Web Client			      Web Server
+----------- Request ---------->
+<-------- Response ----------
+Set-Cookie：JSESSIONID=xxx
+--------- Request ----------->
+Cookie:JSESSIONID=xxxx
+<--------- Response ----------
 ```
 		
 #### 方式二: 使用 URL回写来实现

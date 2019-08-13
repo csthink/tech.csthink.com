@@ -4,7 +4,7 @@ module.exports = [
   {
     text: '🚀 后端',
     items: [
-      {text: 'Java', link:'/zh/Java/'},
+      {text: 'Java', link:'/zh/Java/软件设计原则-上.md'},
       {text: 'PHP', link:'/zh/PHP/'},
     ]
   },

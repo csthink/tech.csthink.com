@@ -2,6 +2,7 @@ const path = require('path')
 const sidebar_zh = require('./config/sidebar/zh')
 
 module.exports = {
+  // base: '.',
   locales: {
     '/': {
       lang: 'zh-CN',

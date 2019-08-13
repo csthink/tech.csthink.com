@@ -1,3 +1,10 @@
+---
+title: Spring 简介以及 Bean 管理
+
+---
+
+[[toc]]
+
 # Spring 简介以及 Bean 管理
 
 ## Spring 框架的优点 
@@ -13,11 +20,11 @@
     - 内部提供了对 Struts、Hibernate、MyBatis 的直接支持
 - 降低 JavaEE API 的使用难度
     - 封装了常用的一些 API(JDBC、JavaMail、远程调用等)
-    
-<!-- more -->
 
 ## 模块
+
 ![Spring 模块](https://images.csthink.com/spring-overview.png)
+
 - 核心容器包括 **`spirng-core`，`spring-beans`，`spring-context`，`spring-context-support`，`spring-expressing`(SPEL,Spring表达式语言)**
 - AOP：AOP 的实现和 AspectJ 的支持
 - 消息：提供对基于消息应用的支持，提供与 Spring Integration 的集成
@@ -44,7 +51,6 @@ class LoginController {
     }
 }
 ```
-
 **使用依赖注入(DI)技术，则将依赖类由外部实例化之后注入给控制器层去使用，依赖注入也称为控制反转(IOC)。当创建一个对象时，它所依赖的对象由外部传递给它，而非自己去创建所依赖的对象（比如上面的例子中通过new手动去创建一个 loginService 对象）。因此，也可以说在对象如何获取它的依赖对象这件事情上，控制权反转了。这便是控制反转和依赖注入这两个名字的由来。**
 
 ## AOP
@@ -127,7 +133,6 @@ JavaBean 在 Java EE 开发中，通常用于封装数据，对于遵循以上�
     </bean>
 </beans>
 ```
-
 ### Spring 配置 Bean 实例化的方式
 **设置 Spring 如何来实例化 Bean 类**
 
@@ -206,8 +211,10 @@ public class DefaultServiceLocator {
 
 
 #### Spring Bean 的完整生命周期
-> Spring 只帮我们管理单例模式 Bean 的完整生命周期，对于 prototype 的 Bean ，Spring 在创建好交给使用者之后则不会再管理后续的生命周期
 
+::: tip
+Spring 只帮我们管理单例模式 Bean 的完整生命周期，对于 prototype 的 Bean ，Spring 在创建好交给使用者之后则不会再管理后续的生命周期
+:::
 
 1. instantiate bean 对象实例化
 2. populate properties 封装属性
@@ -257,8 +264,9 @@ public class DefaultServiceLocator {
 ```
 
 ### Spring Bean 的属性注入
-- 构造器注入(通过 `<constructor-arg>` 元素完成注入)
-- set 注入(通过<property> 元素完成注入)
+
+- 构造器注入(通过 ```<constructor-arg>``` 元素完成注入)
+- set 注入(通过 ```<property>``` 元素完成注入)
     - 普通 setter 的注入
     - 使用 p 名称空间实现 setter 方式简化属性注入(Spring 2.5)
     - 使用 c 名称空间实现 setter 方式的属性注入
@@ -273,6 +281,13 @@ public class DefaultServiceLocator {
     <constructor-arg name="age" value="18" />
 </bean>
 ```
+
+
+
+
+
+
+
 
 ```java
 public class Person {

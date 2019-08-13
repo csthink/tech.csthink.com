@@ -1,3 +1,10 @@
+---
+title: Spring 基于 AspectJ 的 AOP 开发
+
+---
+
+[[toc]]
+
 # Spring 基于 AspectJ 的 AOP 开发
 
 ## AspectJ 
@@ -6,7 +13,6 @@
 - Spring 建议使用 AspectJ 方式来开发 AOP
 - 使用 AspectJ 需要 Spring AOP 和 AspectJ 相关的 jar 包
 
-<!-- more -->
 下面这个 maven 依赖配置是我接下来 Demo 中用到的依赖
 
 ![Maven 依赖](https://images.csthink.com/Carbonize%202019-04-11%20at%2018.00.45.png)
@@ -34,7 +40,9 @@
 ###  在通知中通过 value 属性定义切入点
  **通过 execution 函数，可以定义切入点的方法切入**
  
-> 语法: execution(<访问修饰符>?<返回类型><方法名>(<参数>)<异常>)
+::: tip
+语法: execution(<访问修饰符>?<返回类型><方法名>(<参数>)<异常>)
+:::
 
 - 匹配所有类的 public 方法 ``execution(pubic **(..))``
 - 匹配指定包下所有的类所有的方法 ``execution(* com.csthink.dao.*(..))`` **不包含子包**

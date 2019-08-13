@@ -1,10 +1,13 @@
+---
+title: Java 基础
+---
+
+[[toc]]
 
 # Java 基础
 
 ## 数据类型
 ![数据类型](https://images.csthink.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-04-09%2009.01.36.png)
-
-<!-- more -->
 
 ### 基本数据类型的默认值
     
@@ -160,4 +163,4 @@ s += 1;
 s++;
 ```
 
-参考: https://stackoverflow.com/questions/8710619/why-dont-javas-compound-assignment-operators-require-casting
+[参考](https://stackoverflow.com/questions/8710619/why-dont-javas-compound-assignment-operators-require-casting)

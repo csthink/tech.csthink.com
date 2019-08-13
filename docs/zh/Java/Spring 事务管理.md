@@ -1,3 +1,10 @@
+---
+title: Spring 事务管理
+
+---
+
+[[toc]]
+
 # Spring 事务管理
 
 ## 数据库事务
@@ -8,7 +15,6 @@
 - 一致性(Consistency) : 数据库总是从一个一致性的状态转换到另一个一致性的状态。 
 - 隔离性(Isolation) : 通常来说，一个事务所做的修改在最终提交以前，对其他事务是不可见的。
 - 持久性(Durability) : 一旦事务提交，则其所做的修改就会永久保存到数据库中。
-<!-- more -->
 
 ### SQL 中的事务隔离级别
 **SQL 标准中定义了四种隔离级别，每一种级别都规定了一个事务中所做的修改，哪些在事务内和事务间是可见的，哪些是不可见的。较低的隔离通常可以执行更高的并发，系统的开销也更低。**
@@ -63,15 +69,16 @@ Spring 框架支持事务管理的核心是事务管理器抽象，对于不同�
     **在使用 JDBC 或 MyBatis 时，XML的参考配置:**   
 
     ```xml
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-	   <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-	   <property name="url" value="jdbc:mysql://localhost:3306/dbName?useUnicode=true&amp;characterEncoding=utf-8"/>
-	   <property name="username" value="username"/>
-	   <property name="password" value="password"/>
-</bean>
-<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-	   <property name="dataSource" ref="dataSource"/>
-</bean>
+      <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/dbName?useUnicode=true&amp;characterEncoding=utf-8"/>
+        <property name="username" value="username"/>
+        <property name="password" value="password"/>
+      </bean>
+
+      <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+          <property name="dataSource" ref="dataSource"/>
+      </bean>
     ```
         
 - **HibernateTransactionManager** : `org.springframework.orm.hibernate3` 包提供，通过将事务管理的职责委托给 `org.hibernate.Transaction` 对象来提供对单个 `org.hibernate.SessionFactory` 的事务管理，该事务管理器只支持 Hibernate3+ 版本，且Spring3.0+ 版本只支持 Hibernate 3.2+ 版本。
@@ -341,5 +348,4 @@ Spring 有5种隔离级别，默认的是 ISOLATION_DEFAULT(使用数据库的�
 
 ![@Transaction 用法](https://images.csthink.com/Carbonize%202019-04-21%20at%2007.52.27.png)
 
-## 源码下载
-可以在 github 上找到我关于 spring 事务的测试代码 : https://github.com/csthink/SPRING-TX
+[源码下载](https://github.com/csthink/SPRING-TX)

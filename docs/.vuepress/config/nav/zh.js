@@ -9,7 +9,7 @@ module.exports = [
     ]
   },
   {
-    text: '💦 大前端',
+    text: '🎨 大前端',
     items: [
       {
         text: '基础',

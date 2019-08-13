@@ -14,8 +14,8 @@ module.exports = {
       description: 'Write Code. Make Magic.'
     }
   },
-  title: 'csthink Blog',
-  description: 'Write Code,Make Magic',
+  // title: 'CSTHINK 技术团队',
+  // description: 'Write Code,Make Magic',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     // ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -38,6 +38,7 @@ module.exports = {
   },
   themeConfig: {
     repo: 'csthink/tech.csthink.com',
+    repoLabel: '🔗 Github',
     editLinks: true,
     docsDir: 'docs',
     sidebarDepth: 2,
@@ -45,11 +46,17 @@ module.exports = {
     locales: {
       '/': {
         label: '简体中文',
-        selectText: '选择语言',
+        selectText: '🌐 选择语言',
         editLinkText: '帮助我们改进这个页面!',
         lastUpdated: '上次更新',
         nav: require('./config/nav/zh'),
-        sidebar: sidebar_zh
+        sidebar: sidebar_zh,
+        serviceWorker: {
+          updatePopup: {
+            message: "发现新内容可用.",
+            buttonText: "刷新"
+          }
+        }
       },
       '/en/': {
         label: 'English',

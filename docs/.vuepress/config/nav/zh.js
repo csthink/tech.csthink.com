@@ -1,15 +1,15 @@
 module.exports = [
-  {text: '首页', link: '/'},
-  {text: '最新文章', link: '/guide/'},
+  {text: '🏡 首页', link: '/'},
+  {text: '📘 最新文章', link: '/guide/'},
   {
-    text: '后端',
+    text: '🚀 后端',
     items: [
       {text: 'Java', link:'/zh/Java/'},
       {text: 'PHP', link:'/zh/PHP/'},
     ]
   },
   {
-    text: '大前端',
+    text: '💦 大前端',
     items: [
       {
         text: '基础',
@@ -44,7 +44,7 @@ module.exports = [
     ]
   },
   {
-    text: '运维',
+    text: '🛰️ 运维',
     items: [
       {text: 'Linux', link:'/zh/Linux/index'},
       {text: 'Docker', link:'/zh/Docker/index'},
@@ -55,11 +55,11 @@ module.exports = [
     ]
   },
   {
-    text: '数据存储',
+    text: '	📦 数据存储',
     items: [
       {text: 'MySQL', link:'/zh/MySQL/index'},
       {text: 'Oracle', link:'/zh/Oracle/index'},
       {text: 'Redis', link:'/zh/Redis/index'},
     ]
-  },
+  }
 ]

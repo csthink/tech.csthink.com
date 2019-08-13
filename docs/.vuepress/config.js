@@ -67,7 +67,7 @@ module.exports = {
       updatePopup: true
     }],
     ['@vuepress/google-analytics',{
-        'ga': 'UA-145436373-1'
+        'ga': 'UA-145589912-1'
     }],
     ['@vuepress/medium-zoom'],
   ],

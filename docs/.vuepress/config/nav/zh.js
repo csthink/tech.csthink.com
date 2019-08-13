@@ -1,6 +1,6 @@
 module.exports = [
   {text: '首页', link: '/'},
-  {text: '最近更新', link: '/guide/'},
+  {text: '最新文章', link: '/guide/'},
   {
     text: '后端',
     items: [

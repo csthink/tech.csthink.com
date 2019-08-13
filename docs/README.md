@@ -1,6 +1,6 @@
 ---
 home: true
-footer: MIT Licensed | Copyright © 2015-present CSTHINK
+footer: MIT Licensed | Copyright © 2019-present CSTHINK
 ---
 
 <div id="home-button-div">

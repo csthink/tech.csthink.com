@@ -5,12 +5,12 @@ module.exports = {
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'CSTHINK',
+      title: 'CSTHINK 技术团队',
       description: '致所有热爱编程的我们'
     },
     '/en/': {
       lang: 'en-US',
-      title: 'CSTHINK',
+      title: 'CSTHINK Tech Team',
       description: 'Write Code. Make Magic.'
     }
   },
@@ -37,7 +37,7 @@ module.exports = {
     },
   },
   themeConfig: {
-    repo: 'csthink/vuepress.csthink.com',
+    repo: 'csthink/tech.csthink.com',
     editLinks: true,
     docsDir: 'docs',
     sidebarDepth: 2,

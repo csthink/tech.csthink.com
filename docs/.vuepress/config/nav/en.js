@@ -1,14 +1,15 @@
 module.exports = [
-  {text: 'Home', link: '/en/index'},
+  {text: '🏡 Home', link: '/en/index'},
+  {text: '📘 Latest Post', link: '/guide/'},
   {
-    text: 'Client Side',
+    text: '🚀 Server Side',
     items: [
       {text: 'Java', link:'/en/Java/'},
       {text: 'PHP', link:'/en/PHP/'},
     ]
   },
   {
-    text: 'Server Side',
+    text: '🎨 Client Side',
     items: [
       {
         text: 'Basic',
@@ -43,7 +44,7 @@ module.exports = [
     ]
   },
   {
-    text: 'OPS',
+    text: '🛰️ OPS',
     items: [
       {text: 'Linux', link:'/en/Linux/index'},
       {text: 'Docker', link:'/en/Docker/index'},
@@ -54,7 +55,7 @@ module.exports = [
     ]
   },
   {
-    text: 'DB',
+    text: '📦 DB',
     items: [
       {text: 'MySQL', link:'/en/MySQL/index'},
       {text: 'Oracle', link:'/en/Oracle/index'},

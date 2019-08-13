@@ -11,7 +11,7 @@ module.exports = {
     },
     '/en/': {
       lang: 'en-US',
-      title: 'CSTHINK Tech Team',
+      title: 'CSTHINK Tech',
       description: 'Write Code. Make Magic.'
     }
   },
@@ -61,7 +61,7 @@ module.exports = {
       },
       '/en/': {
         label: 'English',
-        selectText: 'Languages',
+        selectText: '🌐 Languages',
         editLinkText: 'Help us improve this page!',
         lastUpdated: 'Last Updated',
         nav: require('./config/nav/en'),

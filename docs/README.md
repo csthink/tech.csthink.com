@@ -21,7 +21,7 @@ footer: MIT Licensed | Copyright © 2019-present CSTHINK
 ## 📮 联系
 
 - **GitHub**: [csthink](https://github.com/csthink)
-- **Email**: security.2009@live.cn
+- **Email**: tech@csthink.com
 - **WeChat**: kcly119
 - **QQ**: 1454591941
 
